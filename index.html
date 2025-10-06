@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击下载远程协助软件</title>
+    <style>
+        body {
+            background-color: rgb(243, 243, 243);
+            font-weight: 700;
+        }
+        div {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            /* text-decoration: none; */
+            margin: 0 auto;
+            line-height: 5;
+        }
+        div a {
+            text-decoration: none;
+            color: #000;
+        }
+        p {
+            text-align: center;
+
+        }
+        p a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            /* font-weight: 700; */
+        }
+        p .AA {
+            text-decoration: none;
+            color: #ff0000;
+            font-size: 20px;
+            /* font-weight: 700; */
+        }
+
+        .ccc {
+            color: #0570fd;
+            font-size: 20px;
+        }
+        .img-container {
+          width: 300px;
+          overflow: hidden;
+          position: relative;
+        }
+        .img-container img {
+          width: 100%;
+          transition: transform 0.3s ease;
+        }
+        .img-container img:hover {
+          transform: scale(1.2);
+        }
+        p :hover {
+            color: #f7ad0d;
+        }
+        .hover-effect:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+        .fangwen{
+            width: 200px;
+            position: relative;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fangwen svg{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .fangwen p{
+            font-size: 16px;
+        }
+        .fangwen .fangwen-box{
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: #333333;
+            padding: 0;
+            border-radius: 5px;
+            line-height: 0;
+            display: none;
+        }
+        .fangwen .fangwen-box span{
+            font-size: 12px;
+            color: #ffffff;
+            display: inline-block;
+            padding: 10px 0;
+        }
+        .fangwen:hover .fangwen-box{
+            display: block;
+        }
+        .url{
+            text-decoration: underline;
+            color: blue;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        </style>
+</head>
+<body>
+    <div id="content" style="white-space: nowrap;">
+        请按照工程师或技术的要求，点击下面图标进行下载<a style="color: #FF0004">(自动识别系统)</a>
+    </div>
+
+
+    <div class="img-container">  
+        <a href="javascript:;"  onclick="down(0)">
+             <img class="maaa" src="./maps/logo-teamviewer-2.svg"  alt="TV官方图片链接" title="点击下载">
+            </a>
+    </div>
+    <div class="img-container">  
+        <a href="javascript:;" onclick="td(0)">
+             <img class="maaa" src="https://www.todesk.com/dist/img/d6947e1.svg"  alt="todesk官方图片链接" title="点击下载">
+            </a>
+    </div>
+    <div class="img-container">  
+        <a href="javascript:;" onclick="xrk(0)">
+             <img class="maaa" src="https://res.orayimg.com/sunlogin/1.0/img/ff173cc.png"   alt="向日葵官方图片链接" title="点击下载">
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+    var windowUrl = [
+        'https://download.teamviewer.com/download/TeamViewerQS.exe',
+        'https://download.teamviewer.com/download/TeamViewerQS.exe'
+        
+    ];
+    var macUrl = [
+        'https://download.teamviewer.com/download/TeamViewerQS.dmg',
+        'https://download.teamviewer.com/download/TeamViewerQS.dmg'
+
+    ];
+    
+        var tdwindowUrl = [
+        'https://dl.todesk.com/windows/ToDesk_Lite.exe',
+        'https://dl.todesk.com/windows/ToDesk_Lite.exe'
+    ];
+    var tdmacUrl = [
+        'https://dl.todesk.com/macos/ToDesk_4.7.8.2.pkg',
+        'https://dl.todesk.com/macos/ToDesk_4.7.8.2.pkg'
+
+    ];
+    
+        var xrkwindowUrl = [
+        'https://dw.oray.com/sunlogin/windows/SunloginSOS_1.2.1.61234_Win32.exe',
+        'https://dw.oray.com/sunlogin/windows/SunloginSOS_1.2.1.61234_Win32.exe'
+    ];
+    var xrkmacUrl = [
+        'https://d-cdn.oray.com/sunlogin/mac/SunloginClient_16.0.0.22931_x86_64.dmg',
+        'https://d-cdn.oray.com/sunlogin/mac/SunloginClient_16.0.0.22931_x86_64.dmg'
+
+    ];
+    
+    function down(index) {
+        if (isWindows()) {
+            window.open(windowUrl[index])
+        }
+        if (isMac()) {
+            window.open(macUrl[index])
+        }
+        
+        return false;
+    }
+
+
+    function td(index) {
+        if (isWindows()) {
+            window.open(tdwindowUrl[index])
+        }
+        if (isMac()) {
+            window.open(tdmacUrl[index])
+        }
+    
+        return false;
+    }
+    
+    
+    function xrk(index) {
+        if (isWindows()) {
+            window.open(xrkwindowUrl[index])
+        }
+        if (isMac()) {
+            window.open(xrkmacUrl[index])
+        }
+    
+        return false;
+    }
+    
+    function xl(index) {
+        if (isWindows()) {
+            window.open(xlwindowUrl[index])
+        }
+        if (isMac()) {
+            window.open(xlmacUrl[index])
+        }
+    
+        return false;
+    }
+        function ndm(index) {
+        if (isWindows()) {
+            window.open(ndmwindowUrl[index])
+        }
+        if (isMac()) {
+            window.open(ndmmacUrl[index])
+        }
+    
+        return false;
+    }
+    /** * 是否为mac系统（包含iphone手机） * */ 
+    function isMac() { 
+        return /macintosh|mac os x/i.test(navigator.userAgent); 
+    }
+
+    /** * 是否为windows系统 * */
+    function isWindows() { 
+        return /windows|win32/i.test(navigator.userAgent);
+    }
+</script>
+<center>
+    <p  style="white-space: nowrap;">
+        <a class="links1" href="https://pcchannel.imtt.qq.com/channel/QQBrowser_Setup_QB10_10026011.exe">QQ浏览器下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="links2" href="https://huorong.cn/person">火绒官方下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="links4" href="https://official-package.wpscdn.cn/wps/download/WPS_Setup_17857.exe">WPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="AA links3" href="https://u3hi0j5ls2.feishu.cn/docx/AH2ddsmPqouXUFxtZYacdpI4n2b?from=from_copylink">网站更新与建议&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="links5" href="https://www.winrar.com.cn/download/winrar-x64-713scp.exe">WIN解压&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="links6" href="https://pm.myapp.com/invc/xfspeed/qqpcmgr/download/QQPCDownload_keyword_310036.exe">电脑管家&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="links7" href="text.html">在线文本 </a>
+    </p>
+    <br>
+	</strong><hr>
+    <span style="white-space: nowrap;">
+    ©2008-2025 免责声明:所有软件均收集自网络，如有侵权请
+        <a class="url" href="https://u3hi0j5ls2.feishu.cn/docx/S4f0dy4VBo7L66xhrAlcsHBun2q?from=from_copylink">联系我们</a>删除
+    </span>
+<center>
+    <br>
+    <div class="fangwen" style="display: none;">
+        <svg t="1731721591243" class="icon" viewBox="0 0 1229 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4366" width="200" height="200"><path d="M776.73525 477.136286a263.346465 263.346465 0 1 0-324.507283 0 445.6685 445.6685 0 0 0-276.657134 413.415725v89.079093a44.164117 44.164117 0 0 0 43.891078 44.368896h790.039396a44.164117 44.164117 0 0 0 43.891077-44.368896v-89.079093a445.63437 445.63437 0 0 0-276.657134-413.415725z m263.482985-16.075192a224.267707 224.267707 0 0 0 57.065227-149.420791 221.366663 221.366663 0 0 0-219.455388-222.697731c-3.617772 0-7.030764 0.921508-10.614405 1.092158a312.322901 312.322901 0 0 1 42.76479 92.457954h-0.443689a296.930307 296.930307 0 0 1-59.727361 290.855181c20.000133 9.112689 247.066493 104.744726 247.066494 417.170017h88.225844a44.368896 44.368896 0 0 0 43.891077-44.368897V777.138286a355.46312 355.46312 0 0 0-188.772589-316.077192z m-661.471986 12.320901a296.930307 296.930307 0 0 1-59.761491-290.855181 312.049862 312.049862 0 0 1 42.730661-92.492084c-3.412992 0-6.825984-1.092157-10.580276-1.092158a221.332533 221.332533 0 0 0-219.455387 222.697731 224.335966 224.335966 0 0 0 57.065226 149.420791 355.360731 355.360731 0 0 0-188.738459 316.077192v68.874179a44.164117 44.164117 0 0 0 43.891077 44.368897h87.782156c-0.03413-312.254641 227.06636-407.886678 247.066493-416.999367z" fill="#707070" p-id="4367"></path></svg>
+        <p>访问量</p>
+        <div class="fangwen-box">
+            <span>访问量: 5003323</span>
+        </div>
+    </div>
+    <br>
+    <a class="url" href="https://beian.miit.gov.cn" target="_blank">备案号: 蜀ICP备2024066837号-2</a>
+    <!--<a href="https://beian.miit.gov.cn" target="_blank" style="text-decoration: none; color: darkblue;">备案号: 蜀ICP备2024066837号-2</a>-->
+</body>
+<script>
+    function adjustFontSize() {
+        var windowWidth = window.innerWidth;
+        var fontSize = 30; // 默认字体大小
+        if (windowWidth < 900) {
+            fontSize = 25 - (900 - windowWidth) / 50; // 根据需要调整比例
+            document.getElementById('content').style.fontSize = fontSize + 'px';
+        }
+    }
+    adjustFontSize();
+    window.addEventListener('resize', adjustFontSize);
+</script>
+<script>
+    function bdjustFontSize() {
+        var windowWidth2 = window.innerWidth;
+        var fontSize2 = 20; // 默认字体大小
+        if (windowWidth2 < 1300) {
+            fontSize2 = 20 - (1300 - windowWidth2) / 100; // 根据需要调整比例
+            document.querySelector('.links1').style.fontSize = fontSize2 + 'px';
+            document.querySelector('.links2').style.fontSize = fontSize2 + 'px';
+            document.querySelector('.links3').style.fontSize = fontSize2 + 'px';
+            document.querySelector('.links4').style.fontSize = fontSize2 + 'px';
+            document.querySelector('.links5').style.fontSize = fontSize2 + 'px';
+            document.querySelector('.links6').style.fontSize = fontSize2 + 'px';
+            document.querySelector('.links7').style.fontSize = fontSize2 + 'px';
+        }
+    }
+    bdjustFontSize();
+    window.addEventListener('resize', bdjustFontSize);
+</script>
+<script>  
+    
+    fetch('increment_visits.php')  
+        .then(response => response.json())  
+        .then(data => {  
+            if (data.count) {  
+                document.getElementById('count').innerText = data.count;  
+            } else {  
+                console.error(data.error);  
+            }  
+        })  
+        .catch(error => console.error('Error:', error));  
+</script>
+</html>
