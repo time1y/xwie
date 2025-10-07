@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .contact-info {
+            margin: 25px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .contact-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .location .icon {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .phone .icon {
+            background: #2ecc71;
+            color: white;
+        }
+        
+        .email .icon {
+            background: #3498db;
+            color: white;
+        }
+        
+        .time .icon {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .contact-text h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        
+        .contact-text p {
+            color: #7f8c8d;
+            text-align: left;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #ecf0f1;
+            margin: 30px 0;
+        }
+        
+        .contact-form {
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .success-message {
+            background: #2ecc71;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        @media (max-width: 480px) {
+            .contact-card {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .contact-text h3, .contact-text p {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-card">
+        <h1>联系我们</h1>
+        <p class="subtitle">有任何问题或建议？请随时与我们联系</p>
+        
+        <div class="contact-info">
+            <div class="contact-item location">
+                <div class="icon">📍</div>
+                <div class="contact-text">
+                    <h3>地址</h3>
+                    <p>中国</p>
+                </div>
+            </div>
+            
+            <div class="contact-item phone">
+                <div class="icon">📞</div>
+                <div class="contact-text">
+                    <h3>电话</h3>
+                    <p>没有</p>
+                </div>
+            </div>
+            
+            <div class="contact-item email">
+                <div class="icon">✉️</div>
+                <div class="contact-text">
+                    <h3>邮箱</h3>
+                    <p>13487958@qq.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-item time">
+                <div class="icon">🕒</div>
+                <div class="contact-text">
+                    <h3>工作时间</h3>
+                    <p>24小时</p>
+                </div>
+            </div>
+        </div>
+          
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 简单表单验证
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (name === '' || email === '' || message === '') {
+                alert('请填写所有字段');
+                return;
+            }
+            
+            // 显示成功消息
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // 重置表单
+            document.getElementById('contactForm').reset();
+            
+            // 3秒后隐藏成功消息
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
